@@ -1,129 +1,388 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SnapResize — Privacy Policy</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Политика конфиденциальности — Размер Фото</title>
 <style>
-  :root{
-    --paper:#F3F2F2; --ink:#201E1D; --accent:#EC3013;
-    --muted:rgba(32,30,29,.62); --line:rgba(32,30,29,.18);
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; padding:48px 20px 96px;
-    background:var(--paper); color:var(--ink);
-    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  main{max-width:720px; margin:0 auto}
-  .brand{font-size:13px; letter-spacing:.18em; color:var(--muted); margin:0 0 8px}
-  h1{font-size:42px; line-height:1.1; letter-spacing:-.02em; margin:0 0 4px}
-  .updated{color:var(--muted); font-size:15px; margin:0 0 40px}
-  hr{border:0; border-top:3px solid var(--ink); margin:0 0 40px}
-  h2{font-size:22px; letter-spacing:-.01em; margin:40px 0 10px}
-  p{margin:0 0 14px}
-  ul{margin:0 0 14px; padding-left:22px}
-  li{margin:0 0 8px}
-  a{color:var(--accent)}
-  .lang-divider{margin:72px 0 40px; border-top:1px solid var(--line)}
-  footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--line);
-         color:var(--muted); font-size:15px}
+:root{
+  --paper:#171615; --panel:#1E1C1B; --surface:#332F2D;
+  --ink:#F3F2F2; --muted:#ADA8A5; --line:#3A3634; --accent:#EC3013;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+  padding:0 16px 80px;
+}
+.wrap{max-width:760px;margin:0 auto}
+
+header{padding:44px 0 30px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.mark{width:34px;height:34px;background:var(--accent);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.mark svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2}
+.brand b{font-size:14px;letter-spacing:.14em;font-weight:700}
+h1{font-size:clamp(28px,6vw,40px);line-height:1.15;letter-spacing:-.02em;font-weight:800}
+.meta{margin-top:14px;color:var(--muted);font-size:15px}
+
+.langs{display:flex;gap:8px;margin:26px 0 0}
+.langs button{
+  font:inherit;font-size:14px;font-weight:700;letter-spacing:.08em;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);
+  padding:10px 18px;border-radius:4px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+h2{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+h2 span{color:var(--accent);margin-right:10px}
+p+p,p+ul,ul+p{margin-top:14px}
+ul{padding-left:22px}
+li+li{margin-top:8px}
+strong{font-weight:700}
+a{color:var(--accent)}
+
+.note{background:var(--panel);border-left:3px solid var(--accent);
+  padding:18px 20px;border-radius:0 4px 4px 0;color:#DEDAD8}
+
+.contact{margin-top:34px;background:var(--panel);border:1px solid var(--line);
+  border-radius:6px;padding:26px 24px}
+.contact .mail{display:inline-block;margin-top:10px;font-size:19px;font-weight:700}
+
+footer{padding:34px 0 0;color:var(--muted);font-size:14px}
+
+[data-lang]{display:none}
+[data-lang].on{display:block}
 </style>
 </head>
 <body>
-<main>
+<div class="wrap">
 
-  <p class="brand">SNAPRESIZE</p>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 28 August 2026</p>
-  <hr>
+<header>
+  <div class="brand">
+    <span class="mark"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg></span>
+    <b data-lang="ru" class="on">РАЗМЕР ФОТО</b>
+    <b data-lang="en">РАЗМЕР ФОТО</b>
+  </div>
 
-  <p>SnapResize resizes photos for social media. This policy explains what the app
-     does with your data. The short version: your photos never leave your device.</p>
+  <div data-lang="ru" class="on">
+    <h1>Политика конфиденциальности</h1>
+    <p class="meta">Приложение «Размер Фото» (com.ard.SnapResize) · Редакция от 12 сентября 2026 года</p>
+  </div>
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">“Размер Фото” app (com.ard.SnapResize) · Version dated 12 September 2026</p>
+  </div>
 
-  <h2>Photos</h2>
-  <p>When you choose a photo, the app reads it from your device's gallery, resizes it
-     on the device itself, and writes the result back to your gallery. Photos are
-     never uploaded to us or to anyone else. We never see them, store them, or have
-     any way to access them.</p>
-  <p>The app asks for gallery permission for this reason only. If you decline the
-     permission, the app cannot open or save photos.</p>
+  <div class="langs">
+    <button type="button" data-set="ru" aria-pressed="true">РУССКИЙ</button>
+    <button type="button" data-set="en" aria-pressed="false">ENGLISH</button>
+  </div>
+</header>
 
-  <h2>Information we collect</h2>
-  <p>We do not collect, store, or transmit any personal information. There are no
-     accounts, no sign-in, and no analytics.</p>
+<!-- ══════════════════ РУССКИЙ ══════════════════ -->
+<div data-lang="ru" class="on">
 
-  <h2>Version check</h2>
-  <p>On startup the app downloads a small text file from our website to find out
-     whether a newer version is required. This request contains no information about
-     you. As with any web request, our hosting provider (GitHub Pages) may record the
-     IP address and time of the request in its standard server logs. We do not use
-     these logs and cannot connect them to any individual.</p>
+<section>
+  <p class="note">Коротко: приложение обрабатывает фотографии прямо на вашем устройстве.
+  Снимки никуда не загружаются, аккаунт не нужен, персональные данные мы не собираем.
+  Единственные сведения, которые покидают телефон, — обезличенные технические данные,
+  необходимые для показа рекламы.</p>
+</section>
 
-  <h2>Advertising</h2>
-  <p>This version of the app contains no advertising and no third-party advertising
-     software.</p>
+<section>
+  <h2><span>1.</span>Общие положения</h2>
+  <p>Настоящая Политика объясняет, какие данные обрабатывает мобильное приложение
+  «Размер Фото» (далее — Приложение) и как мы с ними обращаемся.</p>
+  <p>Устанавливая и используя Приложение, вы соглашаетесь с условиями этой Политики.
+  Если вы не согласны с ними, пожалуйста, не используйте Приложение.</p>
+</section>
 
-  <h2>Children</h2>
-  <p>The app is not directed at children and does not knowingly collect any
-     information from anyone.</p>
+<section>
+  <h2><span>2.</span>Какие данные мы <em>не</em> собираем</h2>
+  <p>Приложение не запрашивает регистрацию и не создаёт учётных записей. Мы не собираем
+  и не храним:</p>
+  <ul>
+    <li>имя, адрес электронной почты, номер телефона;</li>
+    <li>данные ваших аккаунтов в социальных сетях;</li>
+    <li>контакты, сообщения, историю звонков;</li>
+    <li>точное местоположение (GPS);</li>
+    <li>ваши фотографии и созданные в Приложении изображения.</li>
+  </ul>
+</section>
 
-  <h2>Changes to this policy</h2>
-  <p>If we change what the app does with data, we will update this page and change the
-     date at the top. Continued use of the app after a change means you accept the
-     updated policy.</p>
+<section>
+  <h2><span>3.</span>Работа с фотографиями</h2>
+  <p>Чтобы изменить размер снимка, Приложение запрашивает доступ к галерее устройства.
+  Выбранная фотография открывается и обрабатывается <strong>локально, в памяти вашего
+  телефона</strong>. Она не передаётся на наши серверы, не копируется в облако и не
+  отправляется третьим лицам — у Приложения попросту нет такой функции.</p>
+  <p>Готовое изображение сохраняется обратно в галерею как отдельный файл. Исходный
+  снимок при этом не изменяется и не удаляется.</p>
+  <p>Приложение получает доступ только к тем файлам, которые вы выбрали сами. Оно не
+  просматривает галерею целиком и не строит каталог ваших фотографий.</p>
+</section>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:snapresizeinfo@gmail.com">snapresizeinfo@gmail.com</a></p>
+<section>
+  <h2><span>4.</span>Данные, которые остаются на устройстве</h2>
+  <p>Приложение сохраняет в локальном хранилище телефона небольшой набор служебных
+  настроек, чтобы не спрашивать одно и то же при каждом запуске:</p>
+  <ul>
+    <li>выбранный язык интерфейса;</li>
+    <li>последнюю использованную площадку и формат;</li>
+    <li>счётчик сохранённых изображений (нужен для управления частотой показа рекламы).</li>
+  </ul>
+  <p>Эти сведения обезличены, никуда не передаются и удаляются вместе с Приложением.</p>
+</section>
 
-  <div class="lang-divider"></div>
+<section>
+  <h2><span>5.</span>Реклама</h2>
+  <p>В Приложении может показываться реклама. Для её показа используется рекламная
+  платформа <strong>Яндекс Рекламная сеть (Yandex Mobile Ads)</strong>. Рекламный модуль
+  является программным обеспечением третьего лица и может самостоятельно обрабатывать
+  обезличенные технические сведения:</p>
+  <ul>
+    <li>рекламный идентификатор устройства (Google Advertising ID / AppSet ID);</li>
+    <li>IP-адрес, приблизительный регион (уровень города или страны);</li>
+    <li>модель устройства, версию операционной системы, язык и часовой пояс;</li>
+    <li>сведения о показах рекламы и взаимодействии с ней.</li>
+  </ul>
+  <p>Эти данные обрабатываются на стороне рекламной платформы в соответствии с её
+  собственной политикой конфиденциальности. Мы не получаем доступ к ним в персональном
+  виде и не сопоставляем их с вашими фотографиями.</p>
+  <p>Вы можете ограничить персонализацию рекламы в настройках устройства:
+  <em>Настройки → Google → Реклама → Удалить рекламный идентификатор</em> (название пункта
+  может отличаться в зависимости от производителя телефона).</p>
+  <p>Политика конфиденциальности Яндекса:
+  <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener">yandex.ru/legal/confidential</a></p>
+</section>
 
-  <p class="brand">SNAPRESIZE</p>
-  <h1>Gizlilik Politikası</h1>
-  <p class="updated">Son güncelleme: 28 Ağustos 2026</p>
-  <hr>
+<section>
+  <h2><span>6.</span>Разрешения приложения</h2>
+  <ul>
+    <li><strong>Доступ к фото и медиафайлам</strong> — чтобы открыть выбранный вами
+      снимок и сохранить результат в галерею. Без этого разрешения Приложение не сможет
+      выполнить свою основную задачу.</li>
+    <li><strong>Доступ в интернет и сведения о сети</strong> — только для загрузки
+      рекламных материалов. Фотографии через сеть не передаются.</li>
+    <li><strong>Рекламный идентификатор</strong> — используется рекламным модулем.</li>
+  </ul>
+  <p>Никаких иных разрешений — камеры, микрофона, контактов, геолокации, списка
+  установленных приложений — Приложение не запрашивает.</p>
+</section>
 
-  <p>SnapResize, fotoğrafları sosyal medya boyutlarına getiren bir uygulamadır. Bu
-     metin, uygulamanın verilerinizle ne yaptığını anlatır. Kısacası: fotoğraflarınız
-     cihazınızdan hiç çıkmaz.</p>
+<section>
+  <h2><span>7.</span>Передача данных третьим лицам</h2>
+  <p>Мы не продаём, не сдаём в аренду и не передаём ваши данные третьим лицам.
+  Единственный получатель обезличенных технических сведений — рекламная платформа,
+  указанная в разделе 5.</p>
+  <p>Данные могут быть раскрыты только в случаях, прямо предусмотренных
+  законодательством, по официальному запросу уполномоченных органов.</p>
+</section>
 
-  <h2>Fotoğraflar</h2>
-  <p>Bir fotoğraf seçtiğinizde uygulama onu cihazınızın galerisinden okur, boyutlandırma
-     işlemini cihazın kendisinde yapar ve sonucu yine galerinize yazar. Fotoğraflar bize
-     ya da başka birine gönderilmez. Onları görmüyor, saklamıyor ve erişebileceğimiz
-     hiçbir yol bulunmuyor.</p>
-  <p>Uygulama galeri iznini yalnızca bu iş için istiyor. İzni vermezseniz uygulama
-     fotoğraf açamaz ve kaydedemez.</p>
+<section>
+  <h2><span>8.</span>Хранение и безопасность</h2>
+  <p>Поскольку Приложение не собирает персональные данные и не имеет собственных
+  серверов, хранение таких данных на нашей стороне не осуществляется. Все результаты
+  вашей работы находятся только в памяти вашего устройства и под вашим контролем.</p>
+</section>
 
-  <h2>Topladığımız bilgiler</h2>
-  <p>Hiçbir kişisel bilgi toplamıyor, saklamıyor ve iletmiyoruz. Hesap yok, giriş yok,
-     analiz yazılımı yok.</p>
+<section>
+  <h2><span>9.</span>Дети</h2>
+  <p>Приложение не адресовано детям младше 13 лет и не предназначено для них. Мы
+  сознательно не собираем сведения о детях. Если вам стало известно, что ребёнок
+  предоставил нам какие-либо данные, свяжитесь с нами — мы примем меры.</p>
+</section>
 
-  <h2>Sürüm kontrolü</h2>
-  <p>Uygulama açılışta, yeni bir sürümün gerekli olup olmadığını öğrenmek için web
-     sitemizden küçük bir metin dosyası indirir. Bu istek sizinle ilgili hiçbir bilgi
-     içermez. Her web isteğinde olduğu gibi, barındırma sağlayıcımız (GitHub Pages)
-     isteğin IP adresini ve saatini kendi sunucu kayıtlarına yazabilir. Bu kayıtları
-     kullanmıyoruz ve herhangi bir kişiyle ilişkilendirmemiz mümkün değil.</p>
+<section>
+  <h2><span>10.</span>Ваши права</h2>
+  <p>Вы в любой момент можете:</p>
+  <ul>
+    <li>отозвать разрешение на доступ к фотографиям в настройках устройства;</li>
+    <li>сбросить или удалить рекламный идентификатор;</li>
+    <li>удалить Приложение — вместе с ним удаляются все его локальные настройки;</li>
+    <li>обратиться к нам с вопросом об обработке данных по адресу, указанному ниже.</li>
+  </ul>
+</section>
 
-  <h2>Reklamlar</h2>
-  <p>Uygulamanın bu sürümünde reklam ve üçüncü taraf reklam yazılımı bulunmuyor.</p>
+<section>
+  <h2><span>11.</span>Изменения Политики</h2>
+  <p>Политика может обновляться — например, при добавлении новых функций. Актуальная
+  редакция всегда размещается по этому адресу, дата редакции указана в начале документа.
+  Существенные изменения мы отражаем в описании обновления в магазине приложений.</p>
+</section>
 
-  <h2>Çocuklar</h2>
-  <p>Uygulama çocuklara yönelik değildir ve hiç kimseden bilerek bilgi toplamaz.</p>
+<section style="border:0">
+  <h2><span>12.</span>Контакты</h2>
+  <p>По вопросам, связанным с этой Политикой и обработкой данных, пишите нам:</p>
+  <div class="contact">
+    Разработчик приложения «Размер Фото»
+    <a class="mail" href="mailto:sanpresizeinfo@gmail.com">sanpresizeinfo@gmail.com</a>
+  </div>
+</section>
 
-  <h2>Bu politikadaki değişiklikler</h2>
-  <p>Uygulamanın verilerle yaptığı iş değişirse bu sayfayı günceller ve yukarıdaki
-     tarihi değiştiririz. Değişiklikten sonra uygulamayı kullanmaya devam etmeniz,
-     güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+<footer>© 2026 «Размер Фото». Все права защищены.</footer>
+</div>
 
-  <h2>İletişim</h2>
-  <p>Bu politikayla ilgili sorularınız için:
-     <a href="mailto:snapresizeinfo@gmail.com">snapresizeinfo@gmail.com</a></p>
+<!-- ══════════════════ ENGLISH ══════════════════ -->
+<div data-lang="en">
 
-  <footer>SnapResize · <span id="y"></span></footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<section>
+  <p class="note">In short: the app processes your photos directly on your device.
+  Nothing is uploaded, no account is required, and we collect no personal data.
+  The only information that leaves your phone is anonymous technical data required
+  to display advertising.</p>
+</section>
 
-</main>
+<section>
+  <h2><span>1.</span>General</h2>
+  <p>This Policy explains what data the “Размер Фото” mobile application (the “App”)
+  processes and how we handle it.</p>
+  <p>By installing and using the App you agree to this Policy. If you do not agree with
+  it, please do not use the App.</p>
+</section>
+
+<section>
+  <h2><span>2.</span>Data we do <em>not</em> collect</h2>
+  <p>The App requires no sign-up and creates no accounts. We do not collect or store:</p>
+  <ul>
+    <li>your name, email address or phone number;</li>
+    <li>your social media account data;</li>
+    <li>contacts, messages or call history;</li>
+    <li>precise location (GPS);</li>
+    <li>your photos or the images you create in the App.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span>3.</span>How photos are handled</h2>
+  <p>To resize an image the App asks for access to your device gallery. The photo you
+  select is opened and processed <strong>locally, in your phone's memory</strong>.
+  It is never sent to our servers, copied to any cloud or shared with third parties —
+  the App simply has no such capability.</p>
+  <p>The finished image is saved back to your gallery as a separate file. The original
+  photo is neither modified nor deleted.</p>
+  <p>The App only accesses the files you pick yourself. It does not scan your gallery or
+  build an index of your photos.</p>
+</section>
+
+<section>
+  <h2><span>4.</span>Data stored on your device</h2>
+  <p>The App keeps a small set of settings in local storage so it does not have to ask
+  you the same thing at every launch:</p>
+  <ul>
+    <li>the interface language you chose;</li>
+    <li>the last platform and format you used;</li>
+    <li>a counter of saved images (used to control how often ads appear).</li>
+  </ul>
+  <p>This information is anonymous, is never transmitted, and is removed when you
+  uninstall the App.</p>
+</section>
+
+<section>
+  <h2><span>5.</span>Advertising</h2>
+  <p>The App may display advertising, served through <strong>Yandex Mobile Ads</strong>.
+  The advertising module is third-party software and may independently process anonymous
+  technical information:</p>
+  <ul>
+    <li>the device advertising identifier (Google Advertising ID / AppSet ID);</li>
+    <li>IP address and approximate region (city or country level);</li>
+    <li>device model, OS version, language and time zone;</li>
+    <li>ad impression and interaction data.</li>
+  </ul>
+  <p>This data is processed by the advertising platform under its own privacy policy.
+  We receive no personally identifiable form of it and never link it to your photos.</p>
+  <p>You can limit ad personalisation in your device settings:
+  <em>Settings → Google → Ads → Delete advertising ID</em> (the exact wording varies by
+  manufacturer).</p>
+  <p>Yandex privacy policy:
+  <a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">yandex.com/legal/confidential</a></p>
+</section>
+
+<section>
+  <h2><span>6.</span>Permissions</h2>
+  <ul>
+    <li><strong>Photos and media</strong> — to open the image you selected and save the
+      result to your gallery. Without it the App cannot perform its core function.</li>
+    <li><strong>Internet and network state</strong> — solely to load advertising content.
+      No photos are transmitted over the network.</li>
+    <li><strong>Advertising ID</strong> — used by the advertising module.</li>
+  </ul>
+  <p>No other permissions — camera, microphone, contacts, location or installed app list —
+  are requested.</p>
+</section>
+
+<section>
+  <h2><span>7.</span>Sharing with third parties</h2>
+  <p>We do not sell, rent or share your data. The only recipient of anonymous technical
+  information is the advertising platform named in section 5.</p>
+  <p>Data may be disclosed only where required by law, upon an official request from
+  authorised bodies.</p>
+</section>
+
+<section>
+  <h2><span>8.</span>Storage and security</h2>
+  <p>Because the App collects no personal data and operates no servers of its own, no
+  such data is stored on our side. Everything you create stays in your device's memory
+  and under your control.</p>
+</section>
+
+<section>
+  <h2><span>9.</span>Children</h2>
+  <p>The App is not directed to, or intended for, children under 13. We do not knowingly
+  collect information from children. If you believe a child has provided us with data,
+  please contact us and we will take action.</p>
+</section>
+
+<section>
+  <h2><span>10.</span>Your rights</h2>
+  <p>At any time you can:</p>
+  <ul>
+    <li>revoke photo access in your device settings;</li>
+    <li>reset or delete your advertising identifier;</li>
+    <li>uninstall the App — all of its local settings are removed with it;</li>
+    <li>contact us with any question about data processing at the address below.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span>11.</span>Changes to this Policy</h2>
+  <p>This Policy may be updated, for example when new features are added. The current
+  version is always published at this address and the revision date is shown at the top.
+  Significant changes are also noted in the store release notes.</p>
+</section>
+
+<section style="border:0">
+  <h2><span>12.</span>Contact</h2>
+  <p>For any question regarding this Policy or data processing, write to us:</p>
+  <div class="contact">
+    Developer of the “Размер Фото” app
+    <a class="mail" href="mailto:sanpresizeinfo@gmail.com">sanpresizeinfo@gmail.com</a>
+  </div>
+</section>
+
+<footer>© 2026 “Размер Фото”. All rights reserved.</footer>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.langs button');
+  function set(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    buttons.forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-set') === lang ? 'true' : 'false');
+    });
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { set(b.getAttribute('data-set')); });
+  });
+})();
+</script>
 </body>
 </html>
